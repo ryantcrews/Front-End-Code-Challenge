@@ -1,2 +1,2 @@
-# Front-End-Code-Challenge
+# Front End Code Challenge - AMS Vans
 AMS Vans Front End Development Code Challenge

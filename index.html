@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.width {
+  max-width: 100%;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#sub {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+</style>
+</head>
+<body>
+
+<div class="width">
+  <div class="center">
+    <div class="row" style="text-align: center; background-color:#a5a5a5;">
+      <h3 style="color: #333; padding-top: 1em";>AMS Vans Code Test - 2019</h3>
+        <div class="column" style="background-color:#a5a5a5;">
+          First name: <input id="first_name">      </div>
+        <div class="column" style="background-color:#a5a5a5;">
+          Last name: <input id="last_name">
+        </div>
+          <button id="sub">Submit</button>
+      </form>
+    </div>
+    <hr>
+    <div style="text-align: center;" id="result"></div>
+  </div>
+</div>
+
+<script>
+function formComplete() {
+    var fname = document.getElementById('first_name').value;
+    var lname = document.getElementById('last_name').value;
+    var html = 'Hello <b>' + fname + '</b> ' + lname;
+
+    document.getElementById('result').innerHTML = html;
+}
+    document.getElementById('sub').addEventListener('click', formComplete);
+</script>
+</body>
+</html>
